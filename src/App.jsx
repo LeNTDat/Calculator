@@ -2,6 +2,7 @@ import { useState } from "react"
 import { calculateInvestmentResults, formatter } from "./util/investment"
 import TableResult from "./components/tableResult";
 import FormInputs from "./components/formInput";
+import Header from "./components/Header";
 
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
 
   return (
     <>
-      <FormInputs onChange={handleOnChange} userInput={userInput}  />
+      <Header />
+      <FormInputs onChange={handleOnChange} userInput={userInput} />
       <TableResult result={tableResult} />
     </>
   )
